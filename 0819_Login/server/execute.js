@@ -8,9 +8,12 @@ const app = express();
 const fs = require('fs');
 const TestRouter = require('./TestRouter');
 const LoginRouter = require('./LoginRouter');
+const Register = require('./Register');
 
 app.use('/test', TestRouter);
 app.use('/login', LoginRouter);
+app.use('/register', Register);
+
 
 app.use(express.static('static'));
 app.use(express.static('src'));

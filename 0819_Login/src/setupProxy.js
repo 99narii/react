@@ -14,4 +14,11 @@ module.exports = function(app) {
          changeOrigin: true,
        })
    );  
+   app.use(
+    createProxyMiddleware(['/register'],{
+        //PROD 실행시
+        target: "http://localhost:4000/",
+        changeOrigin: true,
+      })
+  );  
 };
